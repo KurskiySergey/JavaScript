@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cls {
+    clear: both;
+}
+.box {
+    width: 500px;
+    margin: 0 auto;
+}
+.task {
+    margin-bottom: 5px;
+    outline: 1px solid black;
+    height: 30px;
+}
+
+.task span {
+    cursor: pointer;
+    display: block;
+    outline: 1px solid black;
+    margin-right: 15px;
+    float: left;
+}
+
+.task span:hover {
+    background-color: lightgray;
+}
