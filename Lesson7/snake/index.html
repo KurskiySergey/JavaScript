@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="counter">
+            <span>Счет игры:
+                <span class="currentCount">1</span> / <span class="maxCount">10</span>
+            </span>
+        </div>
+        <div class="borderBox">
+            <table class="border"></table>
+        </div>
+        <div class="buttons">
+            <button class="start button">Старт</button>
+            <button class="pause button">Пауза</button>
+        </div>
+        <div class="message">Game snake</div>
+        <div class="settings cls">
+            <div class="setBox">
+                <span>Максимальный размер змейки</span><br>
+                <span>от 10 до 30</span><br>
+                <input type="text" class="snakeSize" value="10">
+            </div>
+            <div class="setBox">
+                <span>Размер игрового поля</span><br>
+                <span>от 10 до 20</span><br>
+                <input type="text" class="borderSize" value="20">
+            </div>
+            <div class="setBox">
+                <span>Скорость змейки</span><br>
+                <span>от 1 до 5</span><br>
+                <input type="text" class="snakeSpeed" value="1">
+            </div>
+
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/Settings.js"></script>
+    <script src="js/Border.js"></script>
+    <script src="js/Snake.js"></script>
+    <script src="js/Food.js"></script>
+    <script src="js/Game.js"></script>
+
+</body>
+
+</html>

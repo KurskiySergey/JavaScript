@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <div class="game_name">TicTacToe</div>
+            <span class="info_player"></span>
+        </div>
+        <table>
+        </table>
+        <button>Начать игру</button>
+        <div class="settings">
+           <p><b>Настройки</b></p>
+            <div class="name_settings set">
+                <p>Имя певого игрока</p>
+                <input type="text" class="name" value="Player1"><br><br>
+                <p>Имя второго игрока</p>
+                <input type="text" class="name" value="Player2">
+            </div>
+            <div class="game_settings set">
+                <p>Размер игрового поля</p><br>
+                <select name="field_size" id="field">
+                    <option value="3">3x3</option>
+                    <option value="3">4x4</option>
+                    <option value="3">5x5</option>
+                </select>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/Border.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/Settings.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

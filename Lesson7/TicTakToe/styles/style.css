@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.info {
+    height: 100px;
+    background-color: #3f53b5e6;
+}
+
+.game_name {
+    margin: 0 auto;
+    color: gold;
+    text-align: center;
+}
+
+.info_player {
+    display: block;
+    margin: 0px auto;
+    color: orange;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+table {
+    width: auto;
+    margin: 50px auto;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+}
+
+td:hover {
+    cursor: pointer;
+    background-color: #0099d440;
+    border-radius: 10%;
+}
+
+button {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+}
+
+.settings {
+    text-align: center;
+    margin: 20px auto;
+    width: auto;
+}
+
+.set {
+    float: left;
+    margin-top: 50px;
+    margin-left: 220px;
+}

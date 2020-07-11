@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+    min-width: 1000px;
+    margin: 0 auto;
+    background-color: #2e353d;
+    text-align: center;
+}
+
+.counter {
+    height: 100px;
+    font-size: 35px;
+    color: white;
+}
+
+.currentCount {
+    color: orange;
+}
+
+.maxCount {
+    color: purple;
+    font-size: 50px;
+}
+
+.borderBox {
+    min-height: 500px;
+}
+
+.border {
+    width: auto;
+    margin: 0 auto;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+td {
+    height: 20px;
+    width: 20px;
+    border: 1px solid white;
+}
+
+.buttons {
+    margin: 0 auto;
+    height: 100px;
+    width: 300px;
+}
+
+.button {
+    border: none;
+    background-color: #007b32;
+    color: white;
+    height: 35px;
+    width: 100px;
+    text-align: center;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #009641;
+}
+
+.button:active {
+    background: #9cfb02;
+    color: black;
+}
+
+.message {
+    height: 100px;
+    color: orange;
+    font-size: 40px;
+    text-align: center;
+}
+
+.settings {
+    min-height: 200px;
+    height: 100px;
+    min-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.setBox {
+    color: white;
+    font-size: 20px;
+    height: inherit;
+    display: inline-block;
+    text-align: center;
+    margin: 20px 40px;
+    border: 2px solid cornflowerblue;
+}
+
+input {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    height: 30px;
+    background-color: lightskyblue;
+}
+
+.cls {
+    clear: both;
+}
+
+.snake {
+    background-color: orange;
+}
+
+.food {
+    background-color: lightgreen;
+}
