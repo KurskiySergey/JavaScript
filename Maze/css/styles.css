@@ -1,0 +1,98 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: aqua;
+}
+
+.header {
+    padding-top: 25px;
+    padding: 25px auto;
+    background-color: azure;
+    min-height: 50px;
+    text-align: center;
+    outline: 10px solid cornflowerblue;
+}
+
+.body {
+    min-width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+
+.border {
+    min-height: 300px;
+    width: auto;
+    border-spacing: 0px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+}
+
+.buttons {
+    text-align: center;
+    margin: 150px auto;
+}
+
+button {
+    height: 100px;
+    width: 150px;
+    margin: 0 50px;
+}
+
+.message {
+    margin-top : 30px;
+    font-size: 80px;
+    text-align: center;
+}
+
+.upBorder {
+    border-top: 1px solid black;
+}
+
+.downBorder {
+    border-bottom: 1px solid black;
+}
+
+.leftBorder {
+    border-left: 1px solid black;
+}
+
+.rightBorder {
+    border-right: 1px solid black;
+}
+
+.way {
+    background-color: orange;
+}
+
+.reper {
+    background-color: pink;
+}
+
+.player {
+    background-color: yellow;
+}
+
+.start {
+    background-color: greenyellow;
+}
+
+.finish {
+    background-color: red;
+}
+
+.footer {
+    background-color: darkblue;
+    min-height: 100px;
+}
