@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <h3>Оригинал</h3><br>
+    <textarea class="text" name="input" id="" cols="30" rows="10">
+One: 'Hi Mary.' 
+Two: 'Oh, hi.'
+One: 'How are you doing?'
+Two: 'I'm doing alright. How about you?'
+One: 'Not too bad. The weather is great isn't it?'
+Two: 'Yes. It's absolutely beautiful today.'
+One: 'I wish it was like this more frequently.'
+Two: 'Me too.'
+One: 'So where are you going now?'
+Two: 'I'm going to meet a friend of mine at the department store'
+One: 'Going to do a little shopping?'
+Two: 'Yeah, I have to buy some presents for my parents.'
+One: 'What's the occasion?'
+Two: 'It's their anniversary.'
+One: 'That's great. Well, you better get going. You don't want to be late.'
+Two: 'I'll see you next time.'
+One: 'Sure.' Bye.'
+    </textarea>
+    <div class="regular">
+        <input class="regular_input" type="text" placeholder="regExp,flags">
+        <input class="regular_input change_info" type="text" placeholder="Заменить на">
+        <div class="buttons">
+            <button class="btn">Преобразовать</button>
+            <button class="find_btn">Найти</button><br>
+        </div>
+
+    </div>
+    <div class="cls"></div>
+    <p>Например: <b>(.)',g</b> создает регулярное выражение <b>/(.)'/g</b> и заменяет выражение на $1", где $1 - элемент в скобках перед символом '
+    </p><br>
+    <p>Выражение <b>([^a-z])'|'$,gmi</b> - заменяет только одинарные ковычки в начале и конце строки при замене на $1" </p>
+    <h3>Результат</h3><br>
+    <textarea class="text" name="result" id="" cols="30" rows="10"></textarea>
+    <h3>Валидация формы</h3>
+    <form action="#" class="form">
+        <input type="text" placeholder="Name" name="Name"><br>
+        <input type="text" placeholder="+7(000)000-0000" name="phone"><br>
+        <input type="text" placeholder="mymail@mail.ru,  my.mail@mail.ru,  my-mail@mail.ru" name="mail"><br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="About you"></textarea><br>
+        <input type="submit" class="submit">
+    </form>
+    <script>
+        window.addEventListener('load', () => {
+
+            function objectIsValid(object) {
+                object.classList.remove('not_valid');
+                object.classList.add('valid');
+            }
+
+            function objectIsNotValid(object) {
+                object.classList.remove('valid');
+                object.classList.add('not_valid');
+                alert(`${object.name} field in not valid`);
+            }
+
+            function useRegular(toChange = true) {
+
+                let str_orig = document.querySelector('.text[name="input"]').value;
+                let input_reg = document.querySelector('.regular_input').value.split(',');
+
+                if (input_reg.length !== 2) {
+                    alert('Неверное выражение');
+                } else {
+                    let regExp = new RegExp(input_reg[0], input_reg[1]);
+                    console.log(regExp);
+                    if (toChange) {
+
+                        let change_str = document.querySelector('.change_info').value;
+                        let str_change = str_orig.replace(regExp, change_str);
+
+                        document.querySelector('.text[name="result"]').value = str_change;
+                    } else {
+                        document.querySelector('.text[name="result"]').value = str_orig.match(regExp);
+                    }
+
+                }
+
+            }
+
+            document.querySelector('.btn').addEventListener('click', () => {
+
+
+                useRegular(toChange=true);
+
+            });
+
+            document.querySelector('.find_btn').addEventListener('click', () => {
+
+                useRegular(toChange=false);
+
+            });
+
+
+            document.querySelector('.submit').addEventListener('click', (event) => {
+
+                event.preventDefault();
+                let regExpName = /[a-z]+/ig;
+                let regExpPhone = /\+7\(\d{3}\)\d{3}-\d{4}/ig;
+                let regExpMail = /^[a-z]+[.-]?[a-z]+@mail.[a-z]+$/ig
+
+                let phone = document.querySelector('input[name="phone"]');
+                let name = document.querySelector('input[name="Name"]');
+                let mail = document.querySelector('input[name="mail"]');
+
+                regExpPhone.test(phone.value) ? objectIsValid(phone) : objectIsNotValid(phone);
+
+                regExpName.test(name.value) ? objectIsValid(name) : objectIsNotValid(name);
+
+                regExpMail.test(mail.value) ? objectIsValid(mail) : objectIsNotValid(mail);
+
+
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
