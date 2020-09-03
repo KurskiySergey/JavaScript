@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="name">
+                <h1>{{title}}</h1>
+            </div>
+            <div class="cart">
+                <table class="search">
+                    <tr>
+                        <td class="search_line">
+                            <input type="text" v-model="search_info">
+                        </td>
+                        <td class="search_btn">
+                            <button class="find" @click="filterGoods()">Search</button>
+                        </td>
+                    </tr>
+                </table>
+                <button class="btn-cart" @click="isVisibleCart = !isVisibleCart">Корзина</button>
+                <div class="user_cart" :class="{hide : !isVisibleCart}" >
+                    <div class="basket_item" v-for="item in basket" :key="item.id_product">
+                        <span><b>{{item.product_name}}</b></span>
+                        <span>x ({{item.quantity}}) </span>
+                        <span> <i>{{item.price}}</i> P </span>
+                        <span><button @click="deleteProduct(item.product_name)"> x </button></span>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="products">
+               <div class="no_products" :class="{hide: !isNoProducts}">
+                   <p>Нет данных</p>
+               </div>
+                <div class="product-item" :class="product.class" v-for="product in products" :key="product.id_product">
+                    <img src="img/default.jpg" alt="">
+                    <h3>{{product.product_name}}</h3>
+                    <p>price - ${{product.price}}P</p>
+                    <button class="by-btn" id="${this.id}" @click="addProduct($event)">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
