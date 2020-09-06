@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="name">
+                <h1>{{title}}</h1>
+            </div>
+       <cart ref="cart"></cart>
+        </div>
+        <div class="main">
+           <products ref="products"></products>
+        </div>
+        <error ref='error'></error>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/Error.js"></script>
+    <script src="js/SearchLine.js"></script>
+    <script src="js/Cart.js"></script>
+    <script src="js/Product.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
