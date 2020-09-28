@@ -1,0 +1,26 @@
+[
+  {
+    "id_product": 124,
+    "product_name": "Keyboard",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, mollitia!",
+    "price": 1600
+  },
+  {
+    "id_product": 457,
+    "product_name": "Gamepad",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis porro quisquam fuga quis veritatis consectetur a, unde fugiat aut architecto.",
+    "price": 3000
+  },
+  {
+    "id_product": 123,
+    "product_name": "Ноутбук",
+    "description": "Lorem ipsum dolor sit amet.",
+    "price": 45600
+  },
+  {
+    "id_product": 456,
+    "product_name": "Мышка",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae aut vel, quia consequatur reiciendis aspernatur.",
+    "price": 1000
+  }
+]
